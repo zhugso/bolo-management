@@ -10,5 +10,9 @@
     </parent>
 
     <artifactId>common</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>core-common</module>
+    </modules>
 
 </project>
