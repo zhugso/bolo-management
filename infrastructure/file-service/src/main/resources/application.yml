@@ -1,0 +1,40 @@
+server:
+  port: 10001
+spring:
+  application:
+    name: bolo-file-service
+
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/bolo-management?serverTimezone=UTC%2B8&useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true
+    username: root
+    password: '000000'
+
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: ${spring.application.name}
+        heartbeat: # 开启心跳，时刻看到服务在线
+          enabled: true
+
+file:
+  storage:
+    s3:
+      # MinIO 示例: http://localhost:9000
+      # Aliyun OSS 示例: https://oss-cn-hangzhou.aliyuncs.com
+      # Tencent COS 示例: https://cos.ap-guangzhou.myqcloud.com
+      endpoint: ${S3_ENDPOINT:http://localhost:9000}
+      access-key: ${S3_ACCESS_KEY:admin}
+      secret-key: ${S3_SECRET_KEY:admin000000}
+      bucket-name: ${S3_BUCKET_NAME:bolo}
+      # MinIO / Aliyun OSS / Tencent COS 通常都能用默认区域，若不需要可保持默认
+      region: ${S3_REGION:cn-north-1}
+      prefix: ${S3_PREFIX:files}
+  upload:
+    max-size: 10737418240
+    part-size: 5242880
+    expire-hours: 24
+

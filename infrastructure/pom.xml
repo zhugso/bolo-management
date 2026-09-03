@@ -10,5 +10,9 @@
     </parent>
 
     <artifactId>infrastructure</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>file-service</module>
+    </modules>
 
 </project>
