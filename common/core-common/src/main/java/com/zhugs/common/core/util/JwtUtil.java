@@ -1,6 +1,6 @@
-package com.zhugs.common.util;
+package com.zhugs.common.core.util;
 
-import com.zhugs.common.constant.JwtConstant;
+import com.zhugs.common.core.constant.JwtConstant;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jws;
 import io.jsonwebtoken.JwtException;

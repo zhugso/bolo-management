@@ -1,4 +1,4 @@
-package com.zhugs.common.util;
+package com.zhugs.common.core.util;
 
 public interface DictEnum {
 

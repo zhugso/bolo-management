@@ -1,4 +1,4 @@
-package com.zhugs.common.constant;
+package com.zhugs.common.core.constant;
 
 public class HeaderConstant {
 

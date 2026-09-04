@@ -1,6 +1,6 @@
 package com.zhugs.file.interfaces;
 
-import com.zhugs.common.util.R;
+import com.zhugs.common.core.util.R;
 import com.zhugs.file.application.FileApplicationService;
 import com.zhugs.file.application.UploadApplicationService;
 import com.zhugs.file.interfaces.dto.UploadRequest;

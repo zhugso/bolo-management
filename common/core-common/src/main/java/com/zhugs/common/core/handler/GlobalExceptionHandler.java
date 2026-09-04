@@ -1,7 +1,7 @@
-package com.zhugs.common.handler;
+package com.zhugs.common.core.handler;
 
-import com.zhugs.common.exception.AuthenticationException;
-import com.zhugs.common.util.R;
+import com.zhugs.common.core.exception.AuthenticationException;
+import com.zhugs.common.core.util.R;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
