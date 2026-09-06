@@ -12,6 +12,7 @@
     <artifactId>infrastructure</artifactId>
     <packaging>pom</packaging>
     <modules>
+        <module>gateway-service</module>
         <module>file-service</module>
     </modules>
 

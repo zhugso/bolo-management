@@ -1,0 +1,57 @@
+server:
+  port: 8080
+spring:
+  threads:
+    virtual:
+      enabled: true
+  application:
+    name: bolo-gateway-service
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: ${spring.application.name}
+        heartbeat: # 开启心跳，时刻看到服务在线
+          enabled: true
+    gateway:
+      #      webmvc:
+      #        routes:
+      #          - id: bolo-system-service
+      #            uri: lb://bolo-system-service
+      #            predicates:
+      #              - Path=/system/**
+      #            filters:
+      #              - StripPrefix=1
+      #          - id: bolo-auth-service
+      #            uri: lb://bolo-auth-service
+      #            predicates:
+      #              - Path=/auth/**
+      #            filters:
+      #              - StripPrefix=1
+      server:
+        webflux:
+          routes:
+            - id: bolo-file-service
+              uri: lb://bolo-file-service
+              predicates:
+                - Path=/file/**
+              filters:
+                - StripPrefix=1
+
+  main:
+    web-application-type: reactive
+
+    allow-bean-definition-overriding: true
+logging:
+  level:
+    org:
+      springframework:
+        cloud:
+          gateway: DEBUG
+        security: DEBUG
+
+security:
+  whitelist:
+  - /file/**
+
