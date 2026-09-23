@@ -10,5 +10,9 @@
     </parent>
 
     <artifactId>module</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>system-module</module>
+    </modules>
 
 </project>

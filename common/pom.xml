@@ -13,6 +13,9 @@
     <packaging>pom</packaging>
     <modules>
         <module>core-common</module>
+        <module>cache-common</module>
+        <module>web-common</module>
+        <module>security-common</module>
     </modules>
 
 </project>

@@ -14,6 +14,7 @@
     <modules>
         <module>gateway-service</module>
         <module>file-service</module>
+        <module>auth-service</module>
     </modules>
 
 </project>

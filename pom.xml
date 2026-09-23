@@ -29,6 +29,24 @@
 
     <dependencyManagement>
         <dependencies>
+
+            <!-- common -->
+            <dependency>
+                <groupId>com.zhugs</groupId>
+                <artifactId>core-common</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.zhugs</groupId>
+                <artifactId>cache-common</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.zhugs</groupId>
+                <artifactId>web-common</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
             <!-- String Boot -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
@@ -52,6 +70,12 @@
                 <groupId>com.mybatis-flex</groupId>
                 <artifactId>mybatis-flex-spring-boot4-starter</artifactId>
                 <version>${mybatis-flex.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.mybatis-flex</groupId>
+                <artifactId>mybatis-flex-processor</artifactId>
+                <version>${mybatis-flex.version}</version>
+                <scope>provided</scope>
             </dependency>
 
             <!-- MapStruct -->

@@ -32,12 +32,14 @@ spring:
       server:
         webflux:
           routes:
+            - id: bolo-auth-service
+              uri: lb://bolo-auth-service
+              predicates:
+                - Path=/auth/**
             - id: bolo-file-service
               uri: lb://bolo-file-service
               predicates:
                 - Path=/file/**
-              filters:
-                - StripPrefix=1
 
   main:
     web-application-type: reactive
