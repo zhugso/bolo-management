@@ -1,0 +1,27 @@
+server:
+  port: 10010
+spring:
+  application:
+    name: bolo-system-service
+
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/bolo-management?serverTimezone=UTC%2B8&useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true
+    username: root
+    password: '000000'
+
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: ${spring.application.name}
+        heartbeat: # 开启心跳，时刻看到服务在线
+          enabled: true
+
+
+
+
+
+
