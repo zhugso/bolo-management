@@ -5,16 +5,17 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.zhugs</groupId>
-        <artifactId>bolo-management</artifactId>
+        <artifactId>service</artifactId>
         <version>0.0.1</version>
     </parent>
 
-    <artifactId>infrastructure</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>cache-infra</module>
-        <module>security-infra</module>
-        <module>web-infra</module>
-    </modules>
+    <artifactId>gateway-service</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.zhugs</groupId>
+            <artifactId>gateway-module</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>

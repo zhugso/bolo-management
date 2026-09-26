@@ -13,6 +13,9 @@
     <packaging>pom</packaging>
     <modules>
         <module>system-module</module>
+        <module>gateway-module</module>
+        <module>file-module</module>
+        <module>auth-module</module>
     </modules>
 
 </project>

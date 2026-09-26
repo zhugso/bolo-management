@@ -12,6 +12,8 @@
         <module>common</module>
         <module>module</module>
         <module>infrastructure</module>
+        <module>service</module>
+        <module>monolith</module>
     </modules>
 
     <properties>
@@ -33,17 +35,41 @@
             <!-- common -->
             <dependency>
                 <groupId>com.zhugs</groupId>
-                <artifactId>core-common</artifactId>
+                <artifactId>common</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <!-- infrastructure -->
+            <dependency>
+                <groupId>com.zhugs</groupId>
+                <artifactId>cache-infra</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.zhugs</groupId>
-                <artifactId>cache-common</artifactId>
+                <artifactId>web-infra</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <!-- module -->
+            <dependency>
+                <groupId>com.zhugs</groupId>
+                <artifactId>gateway-module</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.zhugs</groupId>
-                <artifactId>web-common</artifactId>
+                <artifactId>system-module</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.zhugs</groupId>
+                <artifactId>auth-module</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.zhugs</groupId>
+                <artifactId>file-module</artifactId>
                 <version>${project.version}</version>
             </dependency>
 

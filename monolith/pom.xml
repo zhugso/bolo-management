@@ -9,12 +9,12 @@
         <version>0.0.1</version>
     </parent>
 
-    <artifactId>infrastructure</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>cache-infra</module>
-        <module>security-infra</module>
-        <module>web-infra</module>
-    </modules>
+    <artifactId>monolith</artifactId>
+
+    <properties>
+        <maven.compiler.source>25</maven.compiler.source>
+        <maven.compiler.target>25</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
 
 </project>

@@ -1,0 +1,31 @@
+server:
+  port: 10011
+spring:
+  application:
+    name: bolo-flow-service
+
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/bolo-management?serverTimezone=UTC%2B8&useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true
+    username: root
+    password: '000000'
+
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: ${spring.application.name}
+        heartbeat: # 开启心跳，时刻看到服务在线
+          enabled: true
+
+Camunda:
+  bpm:
+    database:
+      type: mysql
+      schema-update: true # 是否自动建表，但我测试为true时，创建表会出现，因此还是改成false由手工建表。
+    auto-deployment-enabled: false # 自动部署 resources 下的 bpmn文件
+    admin-user:
+      id: admin
+      password: 123456
